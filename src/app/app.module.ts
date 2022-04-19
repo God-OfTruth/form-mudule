@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SmallPipe } from './small.pipe';
+import { GreetPipe } from './greet.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SmallPipe
+    SmallPipe,
+    GreetPipe
   ],
   imports: [
     FormsModule,

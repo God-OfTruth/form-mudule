@@ -2,7 +2,7 @@
   <div>
     Username: <input type="text" name="username" minlength="5" ngModel #myInput="ngModel">
   </div>
-  <div class="error" *ngIf="myInput.errors">
+  <div class="error" *ngIf="myInput.errors" >
     {{myInput.errors}}
 
     {{myInput}}
@@ -16,4 +16,12 @@
   </div>
   <button>Submit</button>
 </form>
-{{title | small}}
+<br>
+<br>
+{{title | small }}
+<br>
+<br>
+<div *ngIf="greet">
+  {{myInput.value| greet:'hello'}}
+</div>
+

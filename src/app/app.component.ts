@@ -6,12 +6,14 @@ import { NgForm } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
+  greet = false
   title = 'form-mudule';
   onFormSubmition(user : NgForm) {
     console.log(user.form.value);
-    alert("ACCEPTED")
     console.log(user.form.value.username);
-    
+    this.greet=true
   }
 }
