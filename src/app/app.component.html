@@ -1,12 +1,19 @@
 <form (ngSubmit) = "onFormSubmition(loginForm)" #loginForm="ngForm">
   <div>
-    Username: <input type="text" name="username" ngModel #myInput="ngModel">
+    Username: <input type="text" name="username" minlength="5" ngModel #myInput="ngModel">
+  </div>
+  <div class="error" *ngIf="myInput.errors">
+    {{myInput.errors}}
+
+    {{myInput}}
+    
   </div>
   <div>
-    Password: <input type="password" name="password" required ngModel> 
+    Password: <input type="password" name="password" required ngModel #myPwd = "ngModel"> 
+  </div>
+  <div class="error" *ngIf="myPwd.errors">
+    {{myPwd.errors}}
   </div>
   <button>Submit</button>
 </form>
-
-{{myInput}}
-
+{{title | small}}

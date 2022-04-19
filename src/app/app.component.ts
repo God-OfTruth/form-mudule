@@ -9,7 +9,9 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   title = 'form-mudule';
   onFormSubmition(user : NgForm) {
-    console.log(user);
+    console.log(user.form.value);
+    alert("ACCEPTED")
+    console.log(user.form.value.username);
     
   }
 }

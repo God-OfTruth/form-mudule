@@ -1,0 +1,9 @@
+form{
+    display: flexbox;
+    background-color: aqua;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
